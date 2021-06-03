@@ -15,7 +15,7 @@
                   },
                   "teamId": {
                     "title": "Enter your Id of the Team ",
-                    "type": "string"
+                    "type": "number"
                   },
                   "NumberOfMembers": {
                     "title": "Number of members in you Team",
@@ -24,7 +24,14 @@
                   "teamHeadName": {
                     "title": "Name of your Team representatiove",
                     "type": "string"
-                  }                        
+                  },
+                  "participants":{
+                    "title":"Name of the team member",
+                    "type":"array",
+                    "items":{
+                      "type":"string"
+                    }
+                  }                                                          
                }               
             }            
         }

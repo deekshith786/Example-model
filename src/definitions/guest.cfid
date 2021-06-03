@@ -1,0 +1,6 @@
+<caseFileItemDefinition name="guest" definitionType="http://www.omg.org/spec/CMMN/DefinitionType/Unspecified">
+    <property name="guestname" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+    <property name="guestaddress" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+    <property name="guestapproval" type="http://www.omg.org/spec/CMMN/PropertyType/boolean"/>
+    <property name="guestarrivaltimimg" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+</caseFileItemDefinition>

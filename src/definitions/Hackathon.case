@@ -5,7 +5,11 @@
         </text>
     </documentation>
     <caseFileModel>
-        <caseFileItem id="_lYlsz_3" name="Team" multiplicity="ExactlyOne" definitionRef="team.cfid"/>
+        <caseFileItem id="_lYlsz_3" name="Team" multiplicity="ExactlyOne" definitionRef="team.cfid">
+            <children>
+                <caseFileItem id="_lYlsz_110" name="participants" multiplicity="OneOrMore" definitionRef="participants.cfid"/>
+            </children>
+        </caseFileItem>
         <caseFileItem id="_lYlsz_11" name="Event" multiplicity="ExactlyOne" definitionRef="event.cfid">
             <children>
                 <caseFileItem id="_lYlsz_15" name="HodPermission" multiplicity="ExactlyOne" definitionRef="hodpermission.cfid"/>
@@ -13,12 +17,19 @@
         </caseFileItem>
         <caseFileItem id="_lYlsz_35" name="Venue" multiplicity="ExactlyOne" definitionRef="venue.cfid">
             <children>
-                <caseFileItem id="_lYlsz_42" name="CouchPermission" multiplicity="ExactlyOne" definitionRef="couchpermission.cfid"/>
+                <caseFileItem id="_lYlsz_42" name="CoachPermission" multiplicity="ExactlyOne" definitionRef="couchpermission.cfid"/>
             </children>
         </caseFileItem>
+        <caseFileItem id="_lYlsz_70" name="notification" multiplicity="ExactlyOne" definitionRef="notification.cfid"/>
+        <caseFileItem id="_lYlsz_77" name="Resource" multiplicity="OneOrMore" definitionRef="resource.cfid"/>
+        <caseFileItem id="_lYlsz_90" name="Design" multiplicity="ExactlyOne" definitionRef="design.cfid"/>
+        <caseFileItem id="_lYlsz_100" name="guest" multiplicity="ExactlyOne" definitionRef="guest.cfid"/>
+        <caseFileItem id="_lYlsz_115" name="feedback" multiplicity="ExactlyOne" definitionRef="feedback.cfid"/>
     </caseFileModel>
     <casePlanModel id="cm__lYlsz_0" name="Hackathon" autoComplete="true">
-        <planItem id="pi_ht__lYlsz_0" name="Team Details" definitionRef="ht__lYlsz_0"/>
+        <planItem id="pi_ht__lYlsz_0" name="Team Details" definitionRef="ht__lYlsz_0">
+            <entryCriterion id="_lYlsz_71" name="EntryCriterion_10" sentryRef="crit__lYlsz_10"/>
+        </planItem>
         <planItem id="pi_ht__lYlsz_1" name="Select Event" definitionRef="ht__lYlsz_1">
             <entryCriterion id="_lYlsz_7" name="EntryCriterion_0" sentryRef="crit__lYlsz_0"/>
             <entryCriterion id="_lYlsz_30" name="EntryCriterion_4" sentryRef="crit__lYlsz_4"/>
@@ -26,6 +37,25 @@
         </planItem>
         <planItem id="pi__lYlsz_60" name="Event Selection" definitionRef="_lYlsz_60">
             <entryCriterion id="_lYlsz_9" name="EntryCriterion_1" sentryRef="crit__lYlsz_1"/>
+        </planItem>
+        <planItem id="pi_ht__lYlsz_5" name="Release of Event Notification" definitionRef="ht__lYlsz_5"/>
+        <planItem id="pi_ht__lYlsz_6" name="Request Resource" definitionRef="ht__lYlsz_6">
+            <entryCriterion id="_lYlsz_75" name="EntryCriterion_12" sentryRef="crit__lYlsz_12"/>
+        </planItem>
+        <planItem id="pi_ht__lYlsz_7" name="Designing" definitionRef="ht__lYlsz_7">
+            <entryCriterion id="_lYlsz_88" name="EntryCriterion_13" sentryRef="crit__lYlsz_13"/>
+        </planItem>
+        <planItem id="pi_ms__lYlsz_5" name="Marketing of events" definitionRef="ms__lYlsz_5">
+            <entryCriterion id="_lYlsz_95" name="EntryCriterion_14" sentryRef="crit__lYlsz_14"/>
+        </planItem>
+        <planItem id="pi_ht__lYlsz_8" name="Inviting Guests" definitionRef="ht__lYlsz_8">
+            <entryCriterion id="_lYlsz_98" name="EntryCriterion_15" sentryRef="crit__lYlsz_15"/>
+        </planItem>
+        <planItem id="pi_ms__lYlsz_6" name="Successfully event execution" definitionRef="ms__lYlsz_6">
+            <entryCriterion id="_lYlsz_111" name="EntryCriterion_16" sentryRef="crit__lYlsz_16"/>
+        </planItem>
+        <planItem id="pi_ht__lYlsz_9" name="Feedback" definitionRef="ht__lYlsz_9">
+            <entryCriterion id="_lYlsz_116" name="EntryCriterion_17" sentryRef="crit__lYlsz_17"/>
         </planItem>
         <sentry id="crit__lYlsz_0">
             <planItemOnPart id="_lYlsz_8" sourceRef="pi_ht__lYlsz_0">
@@ -47,6 +77,41 @@
                 <standardEvent>complete</standardEvent>
             </planItemOnPart>
         </sentry>
+        <sentry id="crit__lYlsz_10">
+            <planItemOnPart id="_lYlsz_73" sourceRef="pi_ht__lYlsz_5">
+                <standardEvent>complete</standardEvent>
+            </planItemOnPart>
+        </sentry>
+        <sentry id="crit__lYlsz_12">
+            <planItemOnPart id="_lYlsz_76" sourceRef="pi__lYlsz_60">
+                <standardEvent>complete</standardEvent>
+            </planItemOnPart>
+        </sentry>
+        <sentry id="crit__lYlsz_13">
+            <planItemOnPart id="_lYlsz_89" sourceRef="pi_ht__lYlsz_6">
+                <standardEvent>complete</standardEvent>
+            </planItemOnPart>
+        </sentry>
+        <sentry id="crit__lYlsz_14">
+            <planItemOnPart id="_lYlsz_96" sourceRef="pi_ht__lYlsz_7">
+                <standardEvent>complete</standardEvent>
+            </planItemOnPart>
+        </sentry>
+        <sentry id="crit__lYlsz_15">
+            <planItemOnPart id="_lYlsz_99" sourceRef="pi_ms__lYlsz_5">
+                <standardEvent>occur</standardEvent>
+            </planItemOnPart>
+        </sentry>
+        <sentry id="crit__lYlsz_16">
+            <planItemOnPart id="_lYlsz_112" sourceRef="pi_ht__lYlsz_8">
+                <standardEvent>complete</standardEvent>
+            </planItemOnPart>
+        </sentry>
+        <sentry id="crit__lYlsz_17">
+            <planItemOnPart id="_lYlsz_117" sourceRef="pi_ms__lYlsz_6">
+                <standardEvent>occur</standardEvent>
+            </planItemOnPart>
+        </sentry>
         <humanTask id="ht__lYlsz_0" name="Team Details" isBlocking="true">
             <outputs id="_lYlsz_6" name="Team" bindingRef="_lYlsz_3"/>
             <extensionElements mustUnderstand="false">
@@ -63,7 +128,7 @@
                 </cafienne:implementation>
             </extensionElements>
         </humanTask>
-        <humanTask id="ht__lYlsz_2" name="Request Event" isBlocking="true">
+        <humanTask id="ht__lYlsz_2" name="Approve Event Request" isBlocking="true" performerRef="_lYlsz_63">
             <inputs id="_lYlsz_20" name="Event" bindingRef="_lYlsz_11"/>
             <inputs id="_lYlsz_21" name="Team" bindingRef="_lYlsz_3"/>
             <outputs id="_lYlsz_22" name="Event" bindingRef="_lYlsz_11"/>
@@ -83,7 +148,7 @@
                 </cafienne:implementation>
             </extensionElements>
         </humanTask>
-        <humanTask id="ht__lYlsz_4" name="Request Venue" isBlocking="true">
+        <humanTask id="ht__lYlsz_4" name="Request Venue" isBlocking="true" performerRef="_lYlsz_64">
             <inputs id="_lYlsz_45" name="Venue" bindingRef="_lYlsz_35"/>
             <outputs id="_lYlsz_46" name="Venue" bindingRef="_lYlsz_35"/>
             <extensionElements mustUnderstand="false">
@@ -93,17 +158,64 @@
                 </cafienne:implementation>
             </extensionElements>
         </humanTask>
-        <milestone id="ms__lYlsz_0" name="Hod Accepted"/>
-        <milestone id="ms__lYlsz_1" name="Hod Rejected"/>
+        <humanTask id="ht__lYlsz_5" name="Release of Event Notification" isBlocking="true">
+            <outputs id="_lYlsz_72" name="notification" bindingRef="_lYlsz_70"/>
+            <extensionElements mustUnderstand="false">
+                <cafienne:implementation xmlns:cafienne="org.cafienne" humanTaskRef="ReleaseofEventNotification.humantask">
+                    <parameterMapping id="_lYlsz_69" sourceRef="_Yh3y_notificationdetails" targetRef="_lYlsz_72"/>
+                </cafienne:implementation>
+            </extensionElements>
+        </humanTask>
+        <humanTask id="ht__lYlsz_6" name="Request Resource" isBlocking="true" performerRef="_lYlsz_79">
+            <inputs id="_lYlsz_86" name="Team" bindingRef="_lYlsz_3"/>
+            <inputs id="_lYlsz_87" name="Event" bindingRef="_lYlsz_11"/>
+            <outputs id="_lYlsz_85" name="Resource" bindingRef="_lYlsz_77"/>
+            <extensionElements mustUnderstand="false">
+                <cafienne:implementation xmlns:cafienne="org.cafienne" humanTaskRef="Resourcerequest.humantask">
+                    <parameterMapping id="_lYlsz_81" sourceRef="_lYlsz_86" targetRef="_V8E6_team"/>
+                    <parameterMapping id="_lYlsz_82" sourceRef="_lYlsz_87" targetRef="_cjww_eventdetails"/>
+                    <parameterMapping id="_lYlsz_83" sourceRef="_t7LX_resources" targetRef="_lYlsz_85"/>
+                </cafienne:implementation>
+            </extensionElements>
+        </humanTask>
+        <humanTask id="ht__lYlsz_7" name="Designing" isBlocking="true" performerRef="_lYlsz_80">
+            <inputs id="_lYlsz_105" name="Team" bindingRef="_lYlsz_3"/>
+            <inputs id="_lYlsz_106" name="Event" bindingRef="_lYlsz_11"/>
+            <outputs id="_lYlsz_107" name="Design" bindingRef="_lYlsz_90"/>
+            <extensionElements mustUnderstand="false">
+                <cafienne:implementation xmlns:cafienne="org.cafienne" humanTaskRef="Designing.humantask">
+                    <parameterMapping id="_lYlsz_91" sourceRef="_lYlsz_105" targetRef="_Xksr_teamdetails"/>
+                    <parameterMapping id="_lYlsz_92" sourceRef="_lYlsz_106" targetRef="_3CcI_eventdetails"/>
+                    <parameterMapping id="_lYlsz_93" sourceRef="_3lqW_designingdetails" targetRef="_lYlsz_107"/>
+                </cafienne:implementation>
+            </extensionElements>
+        </humanTask>
+        <humanTask id="ht__lYlsz_8" name="Inviting Guests" isBlocking="true" performerRef="_lYlsz_79">
+            <outputs id="_lYlsz_103" name="guest" bindingRef="_lYlsz_100"/>
+            <extensionElements mustUnderstand="false">
+                <cafienne:implementation xmlns:cafienne="org.cafienne" humanTaskRef="InvitingGuests.humantask">
+                    <parameterMapping id="_lYlsz_101" sourceRef="_SvKi_guestdetails" targetRef="_lYlsz_103"/>
+                </cafienne:implementation>
+            </extensionElements>
+        </humanTask>
+        <humanTask id="ht__lYlsz_9" name="Feedback" isBlocking="true" performerRef="_lYlsz_79">
+            <extensionElements mustUnderstand="false">
+                <cafienne:implementation xmlns:cafienne="org.cafienne" humanTaskRef="Feedback.humantask"/>
+            </extensionElements>
+        </humanTask>
+        <milestone id="ms__lYlsz_0" name="HoD Accepted"/>
+        <milestone id="ms__lYlsz_1" name="HoD Rejected"/>
         <milestone id="ms__lYlsz_2" name="Couch Accepted"/>
         <milestone id="ms__lYlsz_3" name="Couch Rejected"/>
         <milestone id="ms__lYlsz_4" name="Completed"/>
+        <milestone id="ms__lYlsz_5" name="Marketing of events"/>
+        <milestone id="ms__lYlsz_6" name="Successfully event execution"/>
         <stage id="_lYlsz_60" name="Event Selection" autoComplete="true">
-            <planItem id="pi_ht__lYlsz_2" name="Request Event" definitionRef="ht__lYlsz_2"/>
-            <planItem id="pi_ms__lYlsz_0" name="Hod Accepted" definitionRef="ms__lYlsz_0">
+            <planItem id="pi_ht__lYlsz_2" name="Approve Event Request" definitionRef="ht__lYlsz_2"/>
+            <planItem id="pi_ms__lYlsz_0" name="HoD Accepted" definitionRef="ms__lYlsz_0">
                 <entryCriterion id="_lYlsz_13" name="EntryCriterion_2" sentryRef="crit__lYlsz_2"/>
             </planItem>
-            <planItem id="pi_ms__lYlsz_1" name="Hod Rejected" definitionRef="ms__lYlsz_1">
+            <planItem id="pi_ms__lYlsz_1" name="HoD Rejected" definitionRef="ms__lYlsz_1">
                 <entryCriterion id="_lYlsz_26" name="EntryCriterion_3" sentryRef="crit__lYlsz_3"/>
             </planItem>
             <planItem id="pi_ms__lYlsz_2" name="Couch Accepted" definitionRef="ms__lYlsz_2">
@@ -186,4 +298,44 @@
             </sentry>
         </stage>
     </casePlanModel>
+    <caseRoles>
+        <role id="_lYlsz_63" name="HoD">
+            <documentation textFormat="text/plain">
+                <text>
+                    <![CDATA[provided permission for selection of event]]>
+                </text>
+            </documentation>
+        </role>
+        <role id="_lYlsz_64" name="Coach">
+            <documentation textFormat="text/plain">
+                <text>
+                    <![CDATA[provides permission for selection of venue]]>
+                </text>
+            </documentation>
+        </role>
+        <role id="_lYlsz_78" name="Principal">
+            <documentation textFormat="text/plain">
+                <text>
+                    <![CDATA[Head of the whole event]]>
+                </text>
+            </documentation>
+        </role>
+        <role id="_lYlsz_79" name="Manager">
+            <documentation textFormat="text/plain">
+                <text>
+                    <![CDATA[Monitoring ]]>
+                </text>
+            </documentation>
+        </role>
+        <role id="_lYlsz_80" name="Designer">
+            <documentation textFormat="text/plain">
+                <text>
+                    <![CDATA[Creating various posters for the event]]>
+                </text>
+            </documentation>
+        </role>
+    </caseRoles>
+    <output id="_lYlsz_65" name="Team" bindingRef="_lYlsz_3"/>
+    <output id="_lYlsz_66" name="Event" bindingRef="_lYlsz_11"/>
+    <output id="_lYlsz_67" name="Venue" bindingRef="_lYlsz_35"/>
 </case>

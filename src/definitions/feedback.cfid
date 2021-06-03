@@ -1,0 +1,6 @@
+<caseFileItemDefinition name="feedback" definitionType="http://www.omg.org/spec/CMMN/DefinitionType/Unspecified">
+    <property name="queries" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+    <property name="likedEvent" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+    <property name="ratingTheEvent" type="http://www.omg.org/spec/CMMN/PropertyType/integer"/>
+    <property name="experienceWithTheEvent" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+</caseFileItemDefinition>

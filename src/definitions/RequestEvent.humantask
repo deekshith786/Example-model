@@ -17,7 +17,7 @@
                   },
                   "teamId": {
                     "title": "Team-Id",
-                    "type": "string"
+                    "type": "number"
                   },
                   "NumberOfMembers": {
                     "title": "Participants in the team Team",
@@ -26,7 +26,14 @@
                   "teamHeadName": {
                     "title": "Team representatiove",
                     "type": "string"
-                  }                        
+                  },
+                  "participants":{
+                    "title":"Name of the team member",
+                    "type":"array",
+                    "items":{
+                      "type":"string"
+                    }
+                  }                         
                }               
             },
             "Event": {

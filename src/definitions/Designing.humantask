@@ -1,0 +1,69 @@
+<humantask>
+    <cafienne:implementation name="Designing" xmlns:cafienne="org.cafienne" class="org.cafienne.cmmn.definition.task.WorkflowTaskDefinition">
+        <input id="_Xksr_teamdetails" name="teamdetails"/>
+        <input id="_3CcI_eventdetails" name="eventdetails"/>
+        <output id="_3lqW_designingdetails" name="designingdetails"/>
+        <task-model>{
+    "schema": {
+        "type": "object",
+        "properties": {
+              "teamdetails": {
+                "title": "Team Details",
+                "type": "object",
+                "properties": {                      
+                  "teamName": {
+                    "title": "Name of the Team",
+                    "type": "string"
+                  },
+                  "teamId": {
+                    "title": "Team-Id",
+                    "type": "number"
+                  }                     
+               }               
+            },
+            "eventdetails": {
+                "title": "Event Details",
+                "type": "object",
+                "properties": {                      
+                  "eventName": {
+                    "title": "Name of the Event",
+                    "type": "string"
+                  },
+                  "eventId": {
+                    "title": "EventId ",
+                    "type": "string"
+                  },
+                  "eventThemme": {
+                    "title": "Theme of the event",
+                    "type": "string"
+                  },
+                  "eventDescription": {
+                    "title": "Event Describtion ",
+                    "type": "string"
+                  }
+               	  }             
+            	},
+            "designingdetails": {
+                "title": "designing  Details",
+                "type": "object",
+                "properties": {                      
+                  "copies":{
+                "title": "How many copies do you want for this poster",
+                "type": "number"
+               	},
+                "sizeOfPoster":{
+                  "title": "Size of this poster",
+               	  "type": "number"
+                },
+                "dateofcompletion":{
+                  "title": "date of completing the designing the project",
+               	  "type": "string"
+                }                  
+              }             
+           	}
+ 	   	}
+	}
+}
+</task-model>
+    </cafienne:implementation>
+</humantask>

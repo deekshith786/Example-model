@@ -1,0 +1,34 @@
+<humantask>
+    <cafienne:implementation name="Feedback" xmlns:cafienne="org.cafienne" class="org.cafienne.cmmn.definition.task.WorkflowTaskDefinition">
+        <output id="_BIew_Feedbackresponse" name="Feedbackresponse"/>
+        <task-model>{
+    "schema": {
+        "type": "object",
+        "properties": {
+            "Feedbackresponse": {
+                "title": "Feedback form",
+                "type": "object",
+                "properties": {                      
+                  "ratingTheEvent": {
+                    "title": "How much will you rate the event",
+                    "type": "number"
+                  },
+                  "likedEvent": {
+                    "title": "which event did you like the most",
+                    "type": "string"
+                  },
+                  "experienceWithTheEvent": {
+                    "title": "how was your overall experience with the event",
+                    "type": "string"
+                  },
+                  "queries": {
+                    "title": "Any queries or suggession if required",
+                    "type": "string"
+                  }                        
+               }               
+            }            
+        }
+    }
+}</task-model>
+    </cafienne:implementation>
+</humantask>

@@ -1,0 +1,40 @@
+<humantask>
+    <cafienne:implementation name="ReleaseofEventNotification" xmlns:cafienne="org.cafienne" class="org.cafienne.cmmn.definition.task.WorkflowTaskDefinition">
+        <input id="_yZ8W_notificationdetails" name="notificationdetails"/>
+        <output id="_Yh3y_notificationdetails" name="notificationdetails"/>
+        <task-model>{
+    "schema": {
+        "type": "object",
+        "properties": {
+            "notificationdetails": {
+                "title": "Hackathon Notification",
+                "type": "object",
+                "properties": {                                       
+                  "EventDateOfRegistration": {
+                    "title": "The date of registration for the event is sheduled on : ",
+                    "type": "string"
+                  },
+                   "EventDescription": {                  
+                    "title": "Description",
+                    "type":"string"
+                  },
+                  "EventRegistrationFees": {
+                    "title": "The following amount is the registration fees for the participation ",
+                    "type": "number"
+                  },
+                  "EventStartTime": {
+                    "title": "The event will be started in the following date",
+                    "type": "string"
+                  },
+                  "Greetings":{
+                    "description": "Hope you all will be participating actively and make the event a big success full",
+                     "title": "Greetings",
+                     "type": "string"
+                  }
+               }               
+            }            
+        }
+    }
+}</task-model>
+    </cafienne:implementation>
+</humantask>

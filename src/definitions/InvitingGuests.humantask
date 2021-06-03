@@ -1,0 +1,34 @@
+<humantask>
+    <cafienne:implementation name="InvitingGuests" xmlns:cafienne="org.cafienne" class="org.cafienne.cmmn.definition.task.WorkflowTaskDefinition">
+        <output id="_SvKi_guestdetails" name="guestdetails"/>
+        <task-model>{
+    "schema": {
+        "type": "object",
+        "properties": {
+            "guestdetails": {
+                "title": "Venue Selected",
+                "type": "object",
+                "properties": {                      
+                  "guestname": {
+                    "title": "Name of the Guest to be invited",
+                    "type": "string"
+                  },
+                  "guestaddress": {
+                    "title": "Address of the guest",
+                    "type": "string"
+                  },
+                  "guestapproval": {
+                    "title": "Is guest available and coming ",
+                    "type": "boolean"
+                  },
+                   "guestarrivaltimimg":{
+                     "title": "At what time will the guest arrive at the event",
+                     "type": "string"
+                   }
+                }
+           	}
+        }
+    }
+}</task-model>
+    </cafienne:implementation>
+</humantask>

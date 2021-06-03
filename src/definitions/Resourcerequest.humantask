@@ -1,0 +1,49 @@
+<humantask>
+    <cafienne:implementation name="Resourcerequest" xmlns:cafienne="org.cafienne" class="org.cafienne.cmmn.definition.task.WorkflowTaskDefinition">
+        <input id="_V8E6_team" name="teamdetails"/>
+        <input id="_cjww_eventdetails" name="eventdetails"/>
+        <output id="_t7LX_resources" name="resources"/>
+        <task-model>{
+    "schema": {
+        "type": "object",
+        "properties": {
+          "teamdetails": {
+            "title": "Resource management",
+            "type": "object",
+            "properties": {                      
+              "teamName": {
+                "title": "Team name",
+                "type": "string"
+              },
+              "teamId": {
+                "title": "Team Id",
+                "type": "number"
+              }
+            }
+          },
+          "eventdetails": {
+            "title": "Event Details",
+            "type": "object",
+            "properties": {                      
+              "eventName": {
+                "title": "Name of the Event",
+                "type": "string"
+              },
+              "eventId": {
+                "title": "EventId ",
+                "type": "string"                  
+              }             
+            }
+          },
+          "resources":{            
+                "title": "Enter the resource required",
+                "type": "array",
+                "items":{
+                  "type":"string"
+                }                                                                             
+         	 }            
+        }
+    }
+}</task-model>
+    </cafienne:implementation>
+</humantask>

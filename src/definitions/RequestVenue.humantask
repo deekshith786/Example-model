@@ -24,15 +24,15 @@
                   }                    
                }               
             },
-           "CouchPermission":{
+           "CoachPermission":{
                  "title":"Request Couch Permission",
                  "type": "object",
                  "properties": {                      
-                   "couchApproval": {
+                   "coachApproval": {
                      "title": "Couch Accepted the venue",
                      "type": "boolean"
                    },
-                   "couchComments":{
+                   "coachComments":{
                      "title": "Comments on the venue",
                      "type": "string"
                    }

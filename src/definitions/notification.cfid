@@ -1,0 +1,7 @@
+<caseFileItemDefinition name="notification" definitionType="http://www.omg.org/spec/CMMN/DefinitionType/Unspecified">
+    <property name="EventDateOfRegistration" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+    <property name="EventDescription" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+    <property name="EventStartTime" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+    <property name="EventRegistrationFees" type="http://www.omg.org/spec/CMMN/PropertyType/integer"/>
+    <property name="Greetings" type="http://www.omg.org/spec/CMMN/PropertyType/string"/>
+</caseFileItemDefinition>
